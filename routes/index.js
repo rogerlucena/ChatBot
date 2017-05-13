@@ -77,11 +77,13 @@ function receivedMessage(event) {
         break;
 
       default:
-        if(messageText.localeCompare("oi"))
+        if(messageText.localeCompare("oi") == 0){
           sendTextMessage(senderID, "Oi Renner, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
-        else if(messageText.localeCompare("olah"))
+        }
+        else if(messageText.localeCompare("olah") == 0){
           sendTextMessage(senderID, "Oi Xandinho, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
-        else sendTextMessage(senderID, messageText);
+        }
+        else {sendTextMessage(senderID, messageText);}
       /*
       if(userService.isUserKnown(senderID))
         sendTextMessage(senderID, messageText);
@@ -90,6 +92,7 @@ function receivedMessage(event) {
         userService.addUser(senderID);
       }
       */
+        break;
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
