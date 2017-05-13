@@ -77,7 +77,12 @@ function receivedMessage(event) {
         break;
 
       default:
+      if(userService.isUserKnown(senderID))
         sendTextMessage(senderID, messageText);
+      else {
+        sendTextMessage(senderID, "Welcome to me - the first Roger's chatbot ! :D");
+        userService.addUser(senderID);
+      }
     }
   } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
