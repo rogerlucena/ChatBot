@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comment version="3.0">
+  <caption/>
+  <note/>
+  <place/>
+  <categories>
+    <category value="sit"/>
+    <category value="help"/>
+    <category value="talk"/>
+    <category value="funny"/>
+    <category value="robot"/>
+    <category value="laptop"/>
+    <category value="cyborg"/>
+    <category value="modern"/>
+    <category value="support"/>
+    <category value="speaker"/>
+    <category value="operator"/>
+    <category value="internet"/>
+    <category value="computer"/>
+    <category value="mechanism"/>
+    <category value="headphone"/>
+    <category value="automatic"/>
+    <category value="microphone"/>
+    <category value="technology"/>
+    <category value="communications"/>
+  </categories>
+</comment>
