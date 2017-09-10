@@ -4,7 +4,9 @@ const config = require('config');
 const request = require('request');
 
 // Trying to use a function from another js file
-var userService = require('userService');
+var imported = document.createElement('script');
+imported.src = '../server/model/userService.js';
+document.head.appendChild(imported);
 
 // Get the config const
 const PAGE_ACCESS_TOKEN = config.get('pageAccessToken');
