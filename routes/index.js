@@ -4,9 +4,11 @@ const config = require('config');
 const request = require('request');
 
 // Trying to use a function from another js file
+/*
 var imported = document.createElement('script');
 imported.src = './server/model/userService.js';
 document.head.appendChild(imported);
+*/
 
 // Get the config const
 const PAGE_ACCESS_TOKEN = config.get('pageAccessToken');
@@ -88,13 +90,15 @@ function receivedMessage(event) {
         break;
 
       default:
-        //sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, messageText);
+        /*
         if(isUserKnown(senderID))
           sendTextMessage(senderID, messageText);
         else {
           sendTextMessage(senderID, "Welcome to the first Roger's chatbot.");
           addUser(senderID);
         }
+        */
         break;
     }
   } else if (messageAttachments) {
