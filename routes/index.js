@@ -89,11 +89,11 @@ function receivedMessage(event) {
 
       default:
         //sendTextMessage(senderID, messageText);
-        if(userService.isUserKnown(senderID))
+        if(isUserKnown(senderID))
           sendTextMessage(senderID, messageText);
         else {
           sendTextMessage(senderID, "Welcome to the first Roger's chatbot.");
-          userService.addUser(senderID);
+          addUser(senderID);
         }
         break;
     }
