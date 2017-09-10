@@ -91,9 +91,7 @@ function receivedMessage(event) {
           sendTextMessage(senderID, "Oi Xandinho, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
         }
         */
-        else {
-          sendTextMessage(senderID, messageText);
-        }
+        sendTextMessage(senderID, messageText);
       /*
       if(userService.isUserKnown(senderID))
         sendTextMessage(senderID, messageText);
