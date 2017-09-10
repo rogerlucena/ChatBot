@@ -83,23 +83,13 @@ function receivedMessage(event) {
         break;
 
       default:
-        /*
-        if(messageText.localeCompare("oi") == 0){
-          sendTextMessage(senderID, "Oi Renner, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
+        //sendTextMessage(senderID, messageText);
+        if(userService.isUserKnown(senderID))
+          sendTextMessage(senderID, messageText);
+        else {
+          sendTextMessage(senderID, "Welcome to the first Roger's chatbot.");
+          userService.addUser(senderID);
         }
-        else if(messageText.localeCompare("olah") == 0){
-          sendTextMessage(senderID, "Oi Xandinho, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
-        }
-        */
-        sendTextMessage(senderID, messageText);
-      /*
-      if(userService.isUserKnown(senderID))
-        sendTextMessage(senderID, messageText);
-      else {
-        sendTextMessage(senderID, "Welcome to me - the first Roger's chatbot ! :D");
-        userService.addUser(senderID);
-      }
-      */
         break;
     }
   } else if (messageAttachments) {
@@ -109,6 +99,7 @@ function receivedMessage(event) {
 
 function sendGenericMessage(recipientId, messageText) {
   // To be expanded in later sections
+  sendTextMessage(recipientId, "My generic message.");
 }
 
 
