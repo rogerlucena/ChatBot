@@ -6,7 +6,7 @@ function isUserKnown(senderId) {
     db.getData('/users/' + senderId);
     return true;
   } catch(error) {
-    return false;
+    return false; 
   }
 }
 

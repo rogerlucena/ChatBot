@@ -3,6 +3,9 @@ const app = express.Router();
 const config = require('config');
 const request = require('request');
 
+// Trying to use a function from another js file
+var userService = require('userService');
+
 // Get the config const
 const PAGE_ACCESS_TOKEN = config.get('pageAccessToken');
 const VERIFY_TOKEN = config.get('verifyToken');
