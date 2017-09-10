@@ -75,15 +75,25 @@ function receivedMessage(event) {
       case 'generic':
         sendGenericMessage(senderID);
         break;
+      case 'oi':
+        sendTextMessage(senderID, "Oi Renner, meu irmaozinho lindo!");
+        break;
+      case 'ola':
+        sendTextMessage(senderID, "Oi Xandinho, meu grande amigo da faculdade!");
+        break;
 
       default:
+        /*
         if(messageText.localeCompare("oi") == 0){
           sendTextMessage(senderID, "Oi Renner, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
         }
         else if(messageText.localeCompare("olah") == 0){
           sendTextMessage(senderID, "Oi Xandinho, essa sua foto de perfil está muito sexy, quer vir me visitar hoje à noite?");
         }
-        else {sendTextMessage(senderID, messageText);}
+        */
+        else {
+          sendTextMessage(senderID, messageText);
+        }
       /*
       if(userService.isUserKnown(senderID))
         sendTextMessage(senderID, messageText);
